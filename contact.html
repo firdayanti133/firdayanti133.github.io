@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="assets/icons/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+		<title>Firdayanti - Contact Me</title>
+		<style>
+			table {
+				border: 2px solid rgb(255, 255, 255);
+				border-collapse: collapse;
+				width: 100%;
+			}
+			td {
+				border: 1px solid gray;
+				padding: 10px;
+				text-align: center;
+			}
+			tr:hover {
+				background-color: #f0f0f0;
+			}
+			a {
+				text-decoration: none;
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<nav style="height: 105px; width: 100%">
+			<ul style="font-size: 24px">
+				<li><a href="index.html">About</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="#" style="text-decoration: underline">Contact</a></li>
+			</ul>
+		</nav>
+
+		<div class="container">
+			<section class="contact">
+				<div class="contact-info">
+					<h2>Let's work together</h2>
+					<p>Interested in collaborating? Let's create something amazing together!</p>
+					<div class="social-icons">
+						<table>
+							<tr>
+								<td>
+									<a href="https://linkedin.com/in/firdayanti13" target="_blank"> <i class="fab fa-linkedin"></i> Firdayanti </a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://wa.me/6288292078042" target="_blank"> <i class="fab fa-whatsapp"></i> +62 882 9207 8042 </a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://instagram.com/yantifirda_13" target="_blank"> <i class="fab fa-instagram"></i> yantifirda_13 </a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<div class="contact-form">
+					<form id="emailForm">
+						<input type="text" name="name" placeholder="Name" required />
+						<input type="email" name="email" placeholder="Email" required />
+						<textarea name="message" placeholder="Type your message here" required></textarea>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const form = document.getElementById("emailForm");
+
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+
+			const name = form.elements["name"].value;
+			const email = form.elements["email"].value;
+			const message = form.elements["message"].value;
+
+			alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+		});
+
+		const menuToggle = document.querySelector(".menu-toggle");
+		const navLinks = document.querySelector(".nav-links");
+
+		if (menuToggle && navLinks) {
+			menuToggle.addEventListener("click", () => {
+				navLinks.classList.toggle("active");
+			});
+		}
+	});
+</script>
